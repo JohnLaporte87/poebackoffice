@@ -34,11 +34,13 @@ class TestPoe {
 
     @Test
     void testToString(){
+        String title = "Fullstack Java";
+        PoeType poeType = PoeType.POEI;
         LocalDate beginDate = LocalDate.of(2022,10,24);
         LocalDate endDate = LocalDate.of(2023,1,27);
         Poe poe = new Poe("Fullstack Java", beginDate, endDate, PoeType.POEI);
-       // assertEquals("POE {Fullstack Java du 2022-10-24 au 2023-01-27 dans POEI", poe.toString());
-        System.out.println(poe.toString());
+        assertEquals("POE {" + title + " du " + beginDate + " au " + endDate + " dans " + poeType + "}", poe.toString(), "to string");
+        //System.out.println(poe.toString());
     }
 
 }
